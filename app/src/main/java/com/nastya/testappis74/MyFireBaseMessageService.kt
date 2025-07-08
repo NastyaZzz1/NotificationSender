@@ -120,6 +120,7 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
             )
             notificationManager.createNotificationChannel(channel)
         }
+
         notificationManager.notify(System.currentTimeMillis().toInt(), notificationBuilder.build())
         notificationManager.notify(0, summaryNotification.build())
     }
