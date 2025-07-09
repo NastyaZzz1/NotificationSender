@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/startAppFragment">
+
+    <fragment
+        android:id="@+id/startAppFragment"
+        android:name="com.nastya.testappis74.StartAppFragment"
+        android:label="fragment_start_app"
+        tools:layout="@layout/fragment_start_app" >
+        <action
+            android:id="@+id/action_startAppFragment_to_createNotifiFragment"
+            app:destination="@id/createNotifiFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createNotifiFragment"
+        android:name="com.nastya.testappis74.CreateNotifiFragment"
+        android:label="fragment_create_notifi"
+        tools:layout="@layout/fragment_create_notifi" >
+        <action
+            android:id="@+id/action_createNotifiFragment_to_startAppFragment"
+            app:destination="@id/startAppFragment" />
+    </fragment>
+</navigation>
